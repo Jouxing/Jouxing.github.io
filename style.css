@@ -1,0 +1,148 @@
+.jumbotron {
+  padding-top: 2rem;
+  background-image: linear-gradient(to right, darkviolet, rgb(0, 0, 255, 0.7));
+}
+
+#hero {
+  background-color: rgb(170, 224, 255);
+}
+.card-body {
+  background-color: rgb(117, 161, 255);
+}
+.card {
+  transition: 0.3s;
+  box-shadow: 0 0 10px darkviolet;
+}
+.card:hover {
+  transform: scale(1);
+}
+@media (min-width: 700px) {
+  .card {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 700px) {
+  .card {
+    transform: scale(0.9);
+  }
+  .card:hover {
+    transform: scale(1);
+  }
+}
+textarea {
+  resize: vertical;
+}
+input:focus::placeholder {
+  opacity: 0;
+}
+textarea:focus::placeholder {
+  opacity: 0;
+}
+a {
+  text-decoration: none;
+}
+a {
+  font-weight: bold;
+}
+
+.a:hover {
+  font-weight: lighter;
+}
+.all {
+  width: 800px;
+  margin: auto;
+}
+
+#about {
+  background-color: white;
+}
+#contact {
+  background-color: #fff;
+}
+.contek {
+  color: rgb(7, 106, 255);
+}
+section {
+  padding-top: 5rem;
+}
+
+#navv {
+  background-image: linear-gradient(to right, blue, rgb(194, 57, 194));
+}
+#about {
+  background-image: linear-gradient(rgb(148, 0, 211), #0000ff);
+}
+#hero {
+  background-image: linear-gradient(blue, darkviolet);
+}
+
+.neontext {
+  color: #fff;
+  text-shadow: 0 0 7px blue, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px blue, 0 0 82px blue, 0 0 92px blue, 0 0 102px blue, 0 0 151px blue;
+}
+.neon {
+  color: white;
+  text-shadow: 0 0 10px blue;
+}
+.neong {
+  box-shadow: 0 0 10px 1px blue, inset 0 0 10px 1px blue;
+}
+footer {
+  background-image: linear-gradient(purple, darkviolet);
+}
+#contact {
+  background-image: linear-gradient(darkviolet, blue);
+}
+.neontext1 {
+  color: #fff;
+}
+.neontext1:hover {
+  text-shadow: 0 0 7px blue, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px blue, 0 0 82px blue, 0 0 92px blue, 0 0 102px blue, 0 0 151px blue;
+}
+/* button kirim */
+.kirim {
+  font-weight: bold;
+  color: violet;
+  border: violet 2px solid;
+  background-color: blue;
+  padding: 4px 20px;
+  border-radius: 5px;
+  position: relative;
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em violet;
+  box-shadow: inset 0 0 0.6em 0 violet, 0 0 1em 0 violet;
+}
+.kirim::before {
+  content: "";
+  position: absolute;
+  background: violet;
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.55);
+  filter: blur(1em);
+  opacity: 0.7;
+}
+.kirim::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  box-shadow: 0 0 2em 0.5em violet;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+.kirim:hover,
+.kirim:focus {
+  background: violet;
+  color: blue;
+  text-shadow: none;
+}
+.kirim:hover::after {
+  opacity: 1;
+}
+
+/* buton kirim end */
