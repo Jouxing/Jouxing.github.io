@@ -1,173 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    <!-- mycss -->
-    <link rel="stylesheet" href="style.css" />
-    <title>Portfolio!</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio ;p</title>
+    <link rel="stylesheet" href="dist/output.css" />
   </head>
-  <body id="home">
-    <!-- navbar -->
-    <nav id="navv" class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
-      <div class="container">
-        <a class="navbar-brand neontext" href="#">My Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#hero">Project</a>
-            <a class="nav-link" href="#contact">Contact</a>
+  <body>
+    <!-- header Start -->
+    <header class="bg-transparent top-0 left-0 w-full flex items-center z-10">
+      <div class="container lg:px-14">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="home" class="font-bold text-lg text-primary block py-6">Jouxing_N</a>
+          </div>
+          <div class="flex items-center lg:hidden px-4">
+            <button id="hamburger" name="hamburfer" type="button" class="block absolute right-4">
+              <span class="hamburger-line origin-top-left"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line origin-bottom-left"></span>
+            </button>
+          </div>
+          <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+            <ul class="lg:flex block lg:-mr-4">
+              <li class="group">
+                <a href="#home" class="text-base text-dark py-2 mx-8 flex hover:text-primary">Beranda</a>
+              </li>
+              <li class="group">
+                <a href="#about" class="text-base text-dark py-2 mx-8 flex hover:text-primary">Tentang Saya</a>
+              </li>
+              <li class="group">
+                <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex hover:text-primary">Portfolio</a>
+              </li>
+              <li class="group">
+                <a href="#clients" class="text-base text-dark py-2 mx-8 flex hover:text-primary">Clients</a>
+              </li>
+              <li class="group">
+                <a href="#blog" class="text-base text-dark py-2 mx-8 flex hover:text-primary">Blog</a>
+              </li>
+              <li class="group">
+                <a href="#contact" class="text-base text-dark py-2 mx-8 flex hover:text-primary">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- hero section start -->
+    <section id="home" class="pt-24">
+      <div class="container lg:px-14">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 sm:w-1/2">
+            <h1 class="text-base font-semibold text-primary">Hai <span class="text-xl md:text-xl">(^///^)</span>, saya <span class="block text-dark text-4xl mt-1 sm:text-4xl mb-1">Jouxing Ngo</span></h1>
+            <h2 class="font-medium text-secondary text-lg mb-5 sm:text-2xl">Student |<span class="text-dark">| Front-end Dev</span></h2>
+            <p class="font-medium text-secondary mb-10 leading-relaxed">Hidup senang, mati tenang <span class="text-lg text-dark block sm:inline-block">o(*￣︶￣*)o</span></p>
+            <a href="" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:opacity-80 transition duration-300 ease-in-out">Hubungi Saya</a>
+          </div>
+          <div class="w-full self-end px-4 mb-4 mt-5 sm:w-1/2">
+            <img src="dist/img/profilbg.png" alt="" class="img-border rounded-full max-w-full mx-auto" />
           </div>
         </div>
       </div>
-    </nav>
-    <!-- end-navbar -->
-    <!-- jumbotron -->
-    <section class="jumbotron text-center">
-      <img src="gambar/profil2.jpg" alt="" width="200" class="neong mt-5 rounded-circle img-thumbnail" />
-      <h1 class="display-4 neon">Jouxing Ngo</h1>
-      <p class="lead neontext">Student | Front-end Dev</p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="darkviolet"
-          fill-opacity="1"
-          d="M0,128L20,117.3C40,107,80,85,120,64C160,43,200,21,240,26.7C280,32,320,64,360,96C400,128,440,160,480,154.7C520,149,560,107,600,112C640,117,680,171,720,202.7C760,235,800,245,840,245.3C880,245,920,235,960,218.7C1000,203,1040,181,1080,176C1120,171,1160,181,1200,165.3C1240,149,1280,107,1320,85.3C1360,64,1400,64,1420,64L1440,64L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"
-        ></path>
-      </svg>
     </section>
-    <!-- end-jumbotron -->
-    <!-- about -->
-    <section id="about">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2 class="neontext">About Me</h2>
+    <!-- hero section end -->
+    <!-- about section start -->
+    <section id="about" class="pt-36 pb-32">
+      <div class="container lg:px-14">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-10 sm:w-1/2">
+            <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya <span class="text-xl">(＾Ｕ＾)ノ~</span></h4>
+            <h2 class="font-bold text-dark text-2xl mb-4 max-w-md sm:text-4xl">Mari belajar programming bersama-sama! ;p</h2>
+            <p class="font-medium text-base text-secondary max-w-xl sm:text-lg">Saya adalah seorang Junior Front-end Developer, Mari belajar promramming bersama-sama dan menjadi seorang profesional!! ;p</p>
+            <span class="text-xl">☆*: .｡. o(≧▽≦)o .｡.:*☆</span>
           </div>
-        </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4 mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, ea est rem quibusdam velit vitae numquam saepe ad quis magni?</div>
+          <div class="w-full px-4 sm:w-1/2">
+            <h3 class="font-semibold text-dark text-xl sm:text-2xl mb-4 sm:pt-10">Mari berteman</h3>
+            <span class="text-xl">(〃￣︶￣)人(￣︶￣〃)</span>
 
-          <div class="col-md-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid inventore fugiat illo tempora, a dolore molestiae nam cupiditate autem voluptates!</div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="blue"
-          fill-opacity="1"
-          d="M0,0L20,10.7C40,21,80,43,120,69.3C160,96,200,128,240,160C280,192,320,224,360,208C400,192,440,128,480,128C520,128,560,192,600,218.7C640,245,680,235,720,208C760,181,800,139,840,112C880,85,920,75,960,90.7C1000,107,1040,149,1080,170.7C1120,192,1160,192,1200,202.7C1240,213,1280,235,1320,208C1360,181,1400,107,1420,69.3L1440,32L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- end-about -->
-    <!-- heroes -->
-    <section id="hero">
-      <div class="container p-4">
-        <div class="row text-center">
-          <div class="col">
-            <h2 class="mb-5 neontext">Project</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4">
-            <div class="card">
-              <!-- <img src="gambar/1.jpg" class="card-img-top" alt="..." width="150" /> -->
-              <div class="card-body">
-                <p class="card-text text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, minima.</p>
-              </div>
+            <p class="font-medium text-base lg:text-lg text-secondary mb-6">Ayo berteman dan berdiskusi bersama saya di media sosial!!</p>
+            <div class="flex items-center mb-4">
+              <!-- instagram -->
+              <a href="https://www.instagram.com/jouxing_ngo" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:border-primary hover:bg-primary hover:text-white duration-300"
+                ><svg class="fill-current" role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  /></svg
+              ></a>
+              <!-- TikTok -->
+              <a href="https://www.tiktok.com/@jouxing66" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:border-dark hover:bg-dark hover:text-white duration-300"
+                ><svg class="fill-current" role="img" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>TikTok</title>
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  /></svg
+              ></a>
+              <!-- GitHub -->
+              <a href="https://github.com/Jouxing" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:border-slate-700 hover:bg-slate-700 hover:text-white duration-300"
+                ><svg class="fill-current" role="img" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <title>GitHub</title>
+                  <path
+                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                  /></svg
+              ></a>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card yz">
-              <!-- <img src="gambar/yz.jpg" class="card-img-top" alt="..." width="150" /> -->
-              <div class="card-body">
-                <p class="card-text text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ab nulla iure aspernatur commodi omnis?</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <!-- <img src="gambar/2.jpg" class="card-img-top" alt="..." width="150" /> -->
-              <div class="card-body">
-                <p class="card-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quaerat.</p>
-              </div>
-            </div>
+            <span class="text-xl">(〜￣▽￣)〜〜(￣▽￣〜)</span>
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="darkviolet" fill-opacity="1" d="M0,64L360,192L720,128L1080,192L1440,128L1440,320L1080,320L720,320L360,320L0,320Z"></path></svg>
     </section>
-    <!-- end-heroes -->
-    <!-- contact -->
-    <section id="contact">
+    <!-- about section end -->
+    <!-- portfolio section start-->
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+      <div class="container lg:px-14">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold uppercase text-lg text-primary mb-2">Portfolio</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Project Saya</h2>
+            <p class="font-medium text-secondary text-md md:text-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, non! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio vel iusto molestias, doloribus voluptatum voluptates? Voluptates dolorem vel vero
+              sequi.
+            </p>
+          </div>
+        </div>
+        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+          <div class="p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img class="w-full" src="dist/img/portfolio/1.jpg" alt="" />
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Website Portfolio Menggunakan Bootstrap</h3>
+            <p class="font-medium text-base text-secondary">Ini adalah website portfolio pertama yang saya buat menggunakan Bootstrap 5, website ini merupakan hasil atau projek dari pembelajaran Html, Css, dan Bootstrap 5.</p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img class="w-full" src="dist/img/portfolio/2.jpg" alt="" />
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Website ECommerce Menggunakan Bootstrap</h3>
+            <p class="font-medium text-base text-secondary">Ini adalah website E-Commerce yang saya buat menggunakan Bootstrap 5, website ini merupakan hasil atau projek dari pembelajaran Html, Css, dan Bootstrap 5.</p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img class="w-full" src="dist/img/portfolio/3.jpg" alt="" />
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Website Gallery Menggunakan Html,Css</h3>
+            <p class="font-medium text-base text-secondary">Ini adalah salah satu website yang saya buat ketika masih belajar Html dan Css, saya membuat website ini ditemani oleh vidio tutorial dari Web Programming Unpas. ^_^</p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <img class="w-full" src="dist/img/portfolio/4.jpg" alt="" />
+            </div>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Website Sederhana Menggunakan React js</h3>
+            <p class="font-medium text-base text-secondary">Ini adalah website pertama yang saya buat menggunakan React js dan Bootstrap 5, website ini saya buat ditemani oleh Vidio tutorial dari seorang youtuber bernama Dea Afrizal .👌</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio section end -->
+    <!-- client section start -->
+    <section id="clients" class="pt-36 pb-32 bg-dark">
       <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <h2 class="mb3 neontext">Contact Me</h2>
+        <div class="w-full px-4">
+          <div class="mx-auto text-center mb-16">
+            <h4 class="font-semibold uppercase text-lg text-primary mb-2">Clients</h4>
+            <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Yang Pernah Bekerjasama</h2>
+            <p class="font-medium text-slate-600 text-md md:text-lg">
+              ⚠️Ini hanyalah contoh Clients Section⚠️ <br />
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, dolore? Illo porro odio voluptatum quibusdam consequuntur libero? Placeat, delectus fugiat.
+            </p>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <form>
-              <div>
-                <label for="name" class="form-label neontext">Nama Lengkap</label>
-                <input type="text" class="form-control" placeholder="Masukan Nama" id="name" autocomplete="off" aria-describedby="name" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label neontext">Alamat Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Masukan Email" autocomplete="off" aria-describedby="email" />
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="neontext form-label">Pesan</label>
-                <textarea class="form-control" placeholder="..." id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-
-              <button type="submit" class="kirim">Kirim</button>
-            </form>
+        <div class="full px-4">
+          <div class="flex flex-wrap items-center justify-center">
+            <a href="" class="max-w-[124px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-150 lg:mx-6 xl:mx-8"><img src="dist/img/clients/Google_2015_logo.svg" alt="" /></a>
+            <a href="" class="max-w-[130px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-150 lg:mx-6 xl:mx-8"><img src="dist/img/clients/tokped.png" alt="" /></a>
+            <a href="" class="max-w-[124px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-150 lg:mx-6 xl:mx-8"><img src="dist/img/clients/MAPPA_Logo.svg.png" alt="" /></a>
+            <a href="" class="max-w-[124px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-150 lg:mx-6 xl:mx-8"><img src="dist/img/clients/Shopee.svg.png" alt="" /></a>
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="purple"
-          fill-opacity="1"
-          d="M0,256L30,266.7C60,277,120,299,180,256C240,213,300,107,360,106.7C420,107,480,213,540,234.7C600,256,660,192,720,144C780,96,840,64,900,90.7C960,117,1020,203,1080,224C1140,245,1200,203,1260,186.7C1320,171,1380,181,1410,186.7L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
-        ></path>
-      </svg>
     </section>
-    <!-- end-contact -->
-    <!-- footer -->
-    <footer class="text-white text-center p-5">
-      <p>
-        Created by
-        <a href="https://www.instagram.com/jouxing_ngo/" target="_blank" class="text-white a"
-          ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-            <path
-              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
-            />
-          </svg>
-          <span class="neontext1">Jouxing_Ngo</span></a
-        >
-      </p>
+    <!-- client section end -->
+    <!-- blog section start -->
+    <section id="blog" class="pt-36 pb-32 bg-slate-100">
+      <div class="container lg:px-14">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold uppercase text-lg text-primary mb-2">Blog</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Tulisan Terkini</h2>
+            <p class="font-medium text-secondary text-md md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nulla vitae quia aspernatur?</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-center">
+          <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl pb-2 shadow-lg overflow-hidden mb-10">
+              <img class="w-full" src="https://source.unsplash.com/360x200?programming" alt="" />
+              <div class="py-2 px-6">
+                <h3><a class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate" href=""> Belajar Programing</a></h3>
+                <p class="font-medium text-secondary text-base mb-4">Lorem ipsum dolor, sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. adipisicing elit. Voluptas, enim.</p>
+                <a class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80" href="">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl pb-2 shadow-lg overflow-hidden mb-10">
+              <img class="w-full" src="https://source.unsplash.com/360x200?mechanical+Keyboard" alt="" />
+              <div class="py-2 px-6">
+                <h3><a class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate" href="">Mechanical Keyboard</a></h3>
+                <p class="font-medium text-secondary text-base mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, enim Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, iste!.</p>
+                <a class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80" href="">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+            <div class="bg-white rounded-xl pb-2 shadow-lg overflow-hidden mb-10">
+              <img class="w-full" src="https://source.unsplash.com/360x200?computer" alt="" />
+              <div class="py-2 px-6">
+                <h3><a class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate" href="">Komputer</a></h3>
+                <p class="font-medium text-secondary text-base mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae et eligendi est! Voluptas, enim.</p>
+                <a class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80" href="">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blog section end -->
+    <!-- contact section start -->
+    <section id="contact" class="pt-36 pb-32">
+      <div class="container lg:px-14">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold uppercase text-lg text-primary mb-2">Contact</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Hubungi Kami</h2>
+            <p class="font-medium text-secondary text-md md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nulla vitae quia aspernatur?</p>
+          </div>
+        </div>
+        <form action="">
+          <div class="w-full lg:w-2/3 lg:mx-auto">
+            <div class="w-full mb-8 px-4">
+              <label for="name" class="text-base text-primary font-bold">Nama</label>
+              <input autocomplete="none" type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+            </div>
+            <div class="w-full mb-8 px-4">
+              <label for="email" class="text-base text-primary font-bold">Email</label>
+              <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary" />
+            </div>
+            <div class="w-full mb-8 px-4">
+              <label for="mesage" class="text-base text-primary font-bold">Pesan</label>
+              <textarea type="text" id="mesage" class="w-full h-32 bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary"></textarea>
+            </div>
+            <div class="w-full px-4">
+              <button class="text-base font-semibold text-white bg-primary py-3 px-4 rounded-lg w-full hover:opacity-80 hover:shadow-lg transition duration-300">Kirim</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- contact section end -->
+    <!-- footer start -->
+    <footer class="bg-slate-800 pt-24 pb-12">
+      <div class="container lg:px-14">
+        <div class="flex">
+          <div class="flex flex-wrap mx-auto">
+            <div class="w-full px-4 mb-12 text-slate-200 font-medium md:w-1/3">
+              <h2 class="font-bold text-4xl text-white mb-5">J.N</h2>
+              <h3 class="font-bold text-2xl mb-2">Hubungi Kami</h3>
+              <p>jouxing04@gmail.com</p>
+              <p>Lokasi. Bumi, Asia, Indonesia</p>
+              <p>Sulawesi</p>
+            </div>
+            <div class="w-full px-4 mb-12 md:w-1/3">
+              <h3 class="font-semibold text-xl text-white mb-5">Kategori Tulisan</h3>
+              <ul>
+                <li class="text-slate-300">
+                  <a href="#" class="block text-base hover:text-primary mb-3">Programming</a>
+                  <a href="#" class="block text-base hover:text-primary mb-3">Mechanical Keyboard</a>
+                  <a href="#" class="block text-base hover:text-primary mb-3">Komputer</a>
+                </li>
+              </ul>
+            </div>
+            <div class="w-full px-4 mb-12 md:w-1/3">
+              <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+              <ul class="">
+                <li class="text-slate-300">
+                  <a href="#home" class="block text-base hover:text-primary mb-3">Beranda</a>
+                  <a href="#about" class="block text-base hover:text-primary mb-3">Tentang Saya</a>
+                  <a href="#portfolio" class="block text-base hover:text-primary mb-3">Portfolio</a>
+                  <a href="#clients" class="block text-base hover:text-primary mb-3">Clients</a>
+                  <a href="#blog" class="block text-base hover:text-primary mb-3">Blog</a>
+                  <a href="#contact" class="block text-base hover:text-primary mb-3">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="w-full pt-10 border-t border-slate-700">
+              <div class="flex items-center justify-center mb-5">
+                <!-- instagram -->
+                <a href="https://www.instagram.com/jouxing_ngo" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:border-primary hover:bg-primary hover:text-white duration-300"
+                  ><svg class="fill-current" role="img" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>Instagram</title>
+                    <path
+                      d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                    /></svg
+                ></a>
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@jouxing66" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:border-dark hover:bg-dark hover:text-white duration-300"
+                  ><svg class="fill-current" role="img" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>TikTok</title>
+                    <path
+                      d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                    /></svg
+                ></a>
+                <!-- GitHub -->
+                <a href="https://github.com/Jouxing" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-400 hover:border-slate-700 hover:bg-slate-700 hover:text-white duration-300"
+                  ><svg class="fill-current" role="img" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>GitHub</title>
+                    <path
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                    /></svg
+                ></a>
+              </div>
+              <p class="font-medium text-sm text-slate-400 text-center">
+                Dibuat oleh <a class="font-bold text-primary" href="https://instagram.com/jouxing_ngo" target="_blank">Jouxing Ngo</a>, menggunakan
+                <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind CSS</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-    <!-- end-footer -->
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+    <!-- footer end -->
+    <script src="dist/js/script.js"></script>
   </body>
 </html>
