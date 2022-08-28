@@ -6,14 +6,13 @@ body {
   font-family: "inter", sans-serif;
 }
 .navbar-fixed {
-  @apply fixed z-[999] bg-white bg-opacity-70;
-  backdrop-filter: blur(5px);
+  @apply fixed z-[999]  bg-opacity-70 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-dark duration-100;
+  @apply my-2 block h-[2px] w-[30px] bg-dark duration-100 dark:bg-white;
 }
 .hamburger-aktiv > span:nth-child(1) {
   @apply rotate-45;
@@ -26,4 +25,11 @@ body {
 }
 .img-border {
   box-shadow: inset 0 0 10px 2px #c026d3;
+}
+.neon {
+  text-shadow: 0 0 2px #c026d3;
+}
+
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
 }
